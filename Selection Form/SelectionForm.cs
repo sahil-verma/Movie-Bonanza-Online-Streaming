@@ -16,5 +16,10 @@ namespace Selection_Form
         {
             InitializeComponent();
         }
+
+        private void currentMovieListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
