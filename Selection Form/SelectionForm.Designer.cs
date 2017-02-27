@@ -1,6 +1,6 @@
 ﻿namespace Selection_Form
 {
-    partial class Form1
+    partial class selectionForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,12 +30,12 @@
         {
             this.SuspendLayout();
             // 
-            // Form1
+            // selectionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Name = "Form1";
+            this.ClientSize = new System.Drawing.Size(621, 345);
+            this.Name = "selectionForm";
             this.Text = "Movie Bonanza - Your Online Streaming Services";
             this.ResumeLayout(false);
 
