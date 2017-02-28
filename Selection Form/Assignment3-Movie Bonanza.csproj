@@ -79,6 +79,29 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Resources\Cedar Rapids.jpg" />
+    <Content Include="Resources\Company Men.jpg" />
+    <Content Include="Resources\Death Race 2.jpg" />
+    <Content Include="Resources\Footloose.jpg" />
+    <Content Include="Resources\Gnomeo and Juliet.jpg" />
+    <Content Include="Resources\I am Number Four.jpg" />
+    <Content Include="Resources\Just Go With It.jpg" />
+    <Content Include="Resources\No Strings Attached.jpg" />
+    <Content Include="Resources\Real Steel.jpg" />
+    <Content Include="Resources\Sanctum.jpg" />
+    <Content Include="Resources\Season of the Witch.jpg" />
+    <Content Include="Resources\The Dilemma.jpg" />
+    <Content Include="Resources\The Eagle.jpg" />
+    <Content Include="Resources\The Green Hornet.jpg" />
+    <Content Include="Resources\The Mechanic.jpg" />
+    <Content Include="Resources\The Other Woman.jpg" />
+    <Content Include="Resources\The Rite.jpg" />
+    <Content Include="Resources\The Roommate.jpg" />
+    <Content Include="Resources\The Way Back.jpg" />
+    <Content Include="Resources\Waiting for Forever.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -50,7 +50,7 @@ namespace Selection_Form
                 categoryTextBox.Text = "Sci-Fi";
             }
 
-            if (currentMovieListBox.SelectedItem.ToString() == "The	Green Hornet")
+            if (currentMovieListBox.SelectedItem.ToString() == "The Green Hornet")
             {
                 categoryTextBox.Text = "Action";
             }
