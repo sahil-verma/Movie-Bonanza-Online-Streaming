@@ -7,7 +7,7 @@
     <ProjectGuid>{4A510B01-9CA8-4D45-819D-C5B47487283E}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Selection_Form</RootNamespace>
+    <RootNamespace>Assignment3_Movie_Bonanza</RootNamespace>
     <AssemblyName>Selection Form</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderForm.Designer.cs">
+      <DependentUpon>OrderForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="SelectionForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +71,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -81,26 +88,26 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="Resources\Cedar Rapids.jpg" />
-    <Content Include="Resources\Company Men.jpg" />
-    <Content Include="Resources\Death Race 2.jpg" />
+    <Content Include="Resources\Cedar_Rapids.jpg" />
+    <Content Include="Resources\Company_Men.jpg" />
+    <Content Include="Resources\Death_Race 2.jpg" />
     <Content Include="Resources\Footloose.jpg" />
-    <Content Include="Resources\Gnomeo and Juliet.jpg" />
-    <Content Include="Resources\I am Number Four.jpg" />
-    <Content Include="Resources\Just Go With It.jpg" />
-    <Content Include="Resources\No Strings Attached.jpg" />
-    <Content Include="Resources\Real Steel.jpg" />
+    <Content Include="Resources\Gnomeo_and_Juliet.jpg" />
+    <Content Include="Resources\I_am_Number_Four.jpg" />
+    <Content Include="Resources\Just_Go_With_It.jpg" />
+    <Content Include="Resources\No_Strings_Attached.jpg" />
+    <Content Include="Resources\Real_Steel.jpg" />
     <Content Include="Resources\Sanctum.jpg" />
-    <Content Include="Resources\Season of the Witch.jpg" />
-    <Content Include="Resources\The Dilemma.jpg" />
-    <Content Include="Resources\The Eagle.jpg" />
-    <Content Include="Resources\The Green Hornet.jpg" />
-    <Content Include="Resources\The Mechanic.jpg" />
-    <Content Include="Resources\The Other Woman.jpg" />
-    <Content Include="Resources\The Rite.jpg" />
-    <Content Include="Resources\The Roommate.jpg" />
-    <Content Include="Resources\The Way Back.jpg" />
-    <Content Include="Resources\Waiting for Forever.jpg" />
+    <Content Include="Resources\Season_of_the_Witch.jpg" />
+    <Content Include="Resources\The_Dilemma.jpg" />
+    <Content Include="Resources\The_Eagle.jpg" />
+    <Content Include="Resources\The_Green_Hornet.jpg" />
+    <Content Include="Resources\The_Mechanic.jpg" />
+    <Content Include="Resources\The_Other_Woman.jpg" />
+    <Content Include="Resources\The_Rite.jpg" />
+    <Content Include="Resources\The_Roommate.jpg" />
+    <Content Include="Resources\The_Way_Back.jpg" />
+    <Content Include="Resources\Waiting_for_Forever.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

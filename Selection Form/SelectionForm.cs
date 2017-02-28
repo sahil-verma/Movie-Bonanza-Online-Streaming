@@ -23,101 +23,121 @@ namespace Selection_Form
             if(currentMovieListBox.SelectedItem.ToString() == "Cedar Rapids")
             {
                 categoryTextBox.Text = "Comedy";
+                moviePictureBox.Image = Assignment3_Movie_Bonanza.Properties.Resources.Cedar_Rapids;
             }
 
             if (currentMovieListBox.SelectedItem.ToString() == "The Dilemma")
             {
                 categoryTextBox.Text = "Comedy";
+                moviePictureBox.Image = Assignment3_Movie_Bonanza.Properties.Resources.The_Dilemma;
             }
 
             if (currentMovieListBox.SelectedItem.ToString() == "No Strings Attached")
             {
                 categoryTextBox.Text = "Comedy";
+                moviePictureBox.Image = Assignment3_Movie_Bonanza.Properties.Resources.No_Strings_Attached;
             }
 
             if (currentMovieListBox.SelectedItem.ToString() == "Just Go With It")
             {
                 categoryTextBox.Text = "Comedy";
+                moviePictureBox.Image = Assignment3_Movie_Bonanza.Properties.Resources.Just_Go_With_It;
             }
 
             if (currentMovieListBox.SelectedItem.ToString() == "Season of the Witch")
             {
                 categoryTextBox.Text = "Sci-Fi";
+                moviePictureBox.Image = Assignment3_Movie_Bonanza.Properties.Resources.Season_of_the_Witch;
             }
 
             if (currentMovieListBox.SelectedItem.ToString() == "I am Number Four")
             {
                 categoryTextBox.Text = "Sci-Fi";
+                moviePictureBox.Image = Assignment3_Movie_Bonanza.Properties.Resources.I_am_Number_Four;
             }
 
             if (currentMovieListBox.SelectedItem.ToString() == "The Green Hornet")
             {
                 categoryTextBox.Text = "Action";
+                moviePictureBox.Image = Assignment3_Movie_Bonanza.Properties.Resources.The_Green_Hornet;
             }
 
             if (currentMovieListBox.SelectedItem.ToString() == "Death Race 2")
             {
                 categoryTextBox.Text = "Action";
+                moviePictureBox.Image = Assignment3_Movie_Bonanza.Properties.Resources.Death_Race_2;
             }
 
             if (currentMovieListBox.SelectedItem.ToString() == "The Mechanic")
             {
                 categoryTextBox.Text = "Action";
+                moviePictureBox.Image = Assignment3_Movie_Bonanza.Properties.Resources.The_Mechanic;
             }
 
             if (currentMovieListBox.SelectedItem.ToString() == "Sanctum")
             {
                 categoryTextBox.Text = "Action";
+                moviePictureBox.Image = Assignment3_Movie_Bonanza.Properties.Resources.Sanctum;
             }
 
             if (currentMovieListBox.SelectedItem.ToString() == "The Other Woman")
             {
                 categoryTextBox.Text = "Action";
+                moviePictureBox.Image = Assignment3_Movie_Bonanza.Properties.Resources.The_Other_Woman;
             }
 
             if (currentMovieListBox.SelectedItem.ToString() == "The Eagle")
             {
                 categoryTextBox.Text = "Action";
+                moviePictureBox.Image = Assignment3_Movie_Bonanza.Properties.Resources.The_Eagle;
             }
 
             if (currentMovieListBox.SelectedItem.ToString() == "Company	Men")
             {
                 categoryTextBox.Text = "Drama";
+                moviePictureBox.Image = Assignment3_Movie_Bonanza.Properties.Resources.Company_Men;
             }
 
             if (currentMovieListBox.SelectedItem.ToString() == "The Way Back")
             {
                 categoryTextBox.Text = "Drama";
+                moviePictureBox.Image = Assignment3_Movie_Bonanza.Properties.Resources.The_Way_Back;
             }
 
             if (currentMovieListBox.SelectedItem.ToString() == "Waiting for Forever")
             {
                 categoryTextBox.Text = "Drama";
+                moviePictureBox.Image = Assignment3_Movie_Bonanza.Properties.Resources.Waiting_for_Forever;
             }
 
             if (currentMovieListBox.SelectedItem.ToString() == "The Rite")
             {
                 categoryTextBox.Text = "Horror";
+                moviePictureBox.Image = Assignment3_Movie_Bonanza.Properties.Resources.The_Rite;
             }
 
             if (currentMovieListBox.SelectedItem.ToString() == "The Roommate")
             {
                 categoryTextBox.Text = "Thriller";
+                moviePictureBox.Image = Assignment3_Movie_Bonanza.Properties.Resources.The_Roommate;
             }
 
             if (currentMovieListBox.SelectedItem.ToString() == "Gnomeo and Juliet")
             {
                 categoryTextBox.Text = "Family";
+                moviePictureBox.Image = Assignment3_Movie_Bonanza.Properties.Resources.Gnomeo_and_Juliet;
             }
 
             if (currentMovieListBox.SelectedItem.ToString() == "Footloose")
             {
                 categoryTextBox.Text = "New Release";
+                moviePictureBox.Image = Assignment3_Movie_Bonanza.Properties.Resources.Footloose;
             }
 
             if (currentMovieListBox.SelectedItem.ToString() == "Real Steel")
             {
                 categoryTextBox.Text = "New Release";
+                moviePictureBox.Image = Assignment3_Movie_Bonanza.Properties.Resources.Real_Steel;
             }
 
 
@@ -144,5 +164,9 @@ namespace Selection_Form
 
         }
 
+        private void nextButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
