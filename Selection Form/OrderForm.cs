@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Assignment3_Movie_Bonanza
 {
-    public partial class OrderForm : Form
+    public partial class yourOrderForm : Form
     {
-        public OrderForm()
+        public yourOrderForm()
         {
             InitializeComponent();
         }
