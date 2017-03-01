@@ -30,12 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderForm));
             this.movieSelectedGroupBox = new System.Windows.Forms.GroupBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.moviePictureBox = new System.Windows.Forms.PictureBox();
             this.categoryTextBox = new System.Windows.Forms.TextBox();
             this.titleTextBox = new System.Windows.Forms.TextBox();
             this.categoryLabel = new System.Windows.Forms.Label();
             this.titleLabel = new System.Windows.Forms.Label();
             this.yourOrderGroupBox = new System.Windows.Forms.GroupBox();
+            this.orderCheckBox = new System.Windows.Forms.CheckBox();
+            this.additionalTextBox = new System.Windows.Forms.TextBox();
+            this.additionalLabel = new System.Windows.Forms.Label();
             this.grandTotalTextBox = new System.Windows.Forms.TextBox();
             this.salesTaxTextBox = new System.Windows.Forms.TextBox();
             this.subTotalTextBox = new System.Windows.Forms.TextBox();
@@ -50,19 +53,19 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.printToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.streamToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cancelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.movieSelectedGroupBox.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.moviePictureBox)).BeginInit();
             this.yourOrderGroupBox.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // movieSelectedGroupBox
             // 
-            this.movieSelectedGroupBox.Controls.Add(this.pictureBox1);
+            this.movieSelectedGroupBox.Controls.Add(this.moviePictureBox);
             this.movieSelectedGroupBox.Controls.Add(this.categoryTextBox);
             this.movieSelectedGroupBox.Controls.Add(this.titleTextBox);
             this.movieSelectedGroupBox.Controls.Add(this.categoryLabel);
@@ -75,19 +78,20 @@
             this.movieSelectedGroupBox.TabStop = false;
             this.movieSelectedGroupBox.Text = "MovieSelected";
             // 
-            // pictureBox1
+            // moviePictureBox
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(20, 145);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(204, 190);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.moviePictureBox.Location = new System.Drawing.Point(20, 145);
+            this.moviePictureBox.Name = "moviePictureBox";
+            this.moviePictureBox.Size = new System.Drawing.Size(204, 190);
+            this.moviePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.moviePictureBox.TabIndex = 4;
+            this.moviePictureBox.TabStop = false;
             // 
             // categoryTextBox
             // 
             this.categoryTextBox.Location = new System.Drawing.Point(20, 106);
             this.categoryTextBox.Name = "categoryTextBox";
+            this.categoryTextBox.ReadOnly = true;
             this.categoryTextBox.Size = new System.Drawing.Size(204, 26);
             this.categoryTextBox.TabIndex = 3;
             // 
@@ -95,6 +99,7 @@
             // 
             this.titleTextBox.Location = new System.Drawing.Point(20, 52);
             this.titleTextBox.Name = "titleTextBox";
+            this.titleTextBox.ReadOnly = true;
             this.titleTextBox.Size = new System.Drawing.Size(204, 26);
             this.titleTextBox.TabIndex = 2;
             // 
@@ -118,6 +123,9 @@
             // 
             // yourOrderGroupBox
             // 
+            this.yourOrderGroupBox.Controls.Add(this.orderCheckBox);
+            this.yourOrderGroupBox.Controls.Add(this.additionalTextBox);
+            this.yourOrderGroupBox.Controls.Add(this.additionalLabel);
             this.yourOrderGroupBox.Controls.Add(this.grandTotalTextBox);
             this.yourOrderGroupBox.Controls.Add(this.salesTaxTextBox);
             this.yourOrderGroupBox.Controls.Add(this.subTotalTextBox);
@@ -134,10 +142,42 @@
             this.yourOrderGroupBox.TabStop = false;
             this.yourOrderGroupBox.Text = "Your Order";
             // 
+            // orderCheckBox
+            // 
+            this.orderCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orderCheckBox.Location = new System.Drawing.Point(6, 233);
+            this.orderCheckBox.Name = "orderCheckBox";
+            this.orderCheckBox.Size = new System.Drawing.Size(263, 25);
+            this.orderCheckBox.TabIndex = 12;
+            this.orderCheckBox.Text = "Order the DVD (adds $10.00 to your order)";
+            this.orderCheckBox.UseVisualStyleBackColor = true;
+            this.orderCheckBox.CheckedChanged += new System.EventHandler(this._orderCheckBox_CheckedChanged);
+            // 
+            // additionalTextBox
+            // 
+            this.additionalTextBox.Location = new System.Drawing.Point(140, 77);
+            this.additionalTextBox.Name = "additionalTextBox";
+            this.additionalTextBox.ReadOnly = true;
+            this.additionalTextBox.Size = new System.Drawing.Size(100, 26);
+            this.additionalTextBox.TabIndex = 11;
+            this.additionalTextBox.Text = "$10.00";
+            this.additionalTextBox.Visible = false;
+            // 
+            // additionalLabel
+            // 
+            this.additionalLabel.Location = new System.Drawing.Point(10, 77);
+            this.additionalLabel.Name = "additionalLabel";
+            this.additionalLabel.Size = new System.Drawing.Size(123, 20);
+            this.additionalLabel.TabIndex = 10;
+            this.additionalLabel.Text = "Additional";
+            this.additionalLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.additionalLabel.Visible = false;
+            // 
             // grandTotalTextBox
             // 
             this.grandTotalTextBox.Location = new System.Drawing.Point(140, 174);
             this.grandTotalTextBox.Name = "grandTotalTextBox";
+            this.grandTotalTextBox.ReadOnly = true;
             this.grandTotalTextBox.Size = new System.Drawing.Size(100, 26);
             this.grandTotalTextBox.TabIndex = 9;
             // 
@@ -145,6 +185,7 @@
             // 
             this.salesTaxTextBox.Location = new System.Drawing.Point(140, 142);
             this.salesTaxTextBox.Name = "salesTaxTextBox";
+            this.salesTaxTextBox.ReadOnly = true;
             this.salesTaxTextBox.Size = new System.Drawing.Size(100, 26);
             this.salesTaxTextBox.TabIndex = 8;
             // 
@@ -152,19 +193,21 @@
             // 
             this.subTotalTextBox.Location = new System.Drawing.Point(140, 110);
             this.subTotalTextBox.Name = "subTotalTextBox";
+            this.subTotalTextBox.ReadOnly = true;
             this.subTotalTextBox.Size = new System.Drawing.Size(100, 26);
             this.subTotalTextBox.TabIndex = 7;
             // 
             // costTextBox
             // 
-            this.costTextBox.Location = new System.Drawing.Point(140, 50);
+            this.costTextBox.Location = new System.Drawing.Point(140, 45);
             this.costTextBox.Name = "costTextBox";
+            this.costTextBox.ReadOnly = true;
             this.costTextBox.Size = new System.Drawing.Size(100, 26);
             this.costTextBox.TabIndex = 6;
             // 
             // costLabel
             // 
-            this.costLabel.Location = new System.Drawing.Point(6, 53);
+            this.costLabel.Location = new System.Drawing.Point(6, 48);
             this.costLabel.Name = "costLabel";
             this.costLabel.Size = new System.Drawing.Size(128, 20);
             this.costLabel.TabIndex = 2;
@@ -207,6 +250,7 @@
             this.backButton.TabIndex = 2;
             this.backButton.Text = "Back";
             this.backButton.UseVisualStyleBackColor = true;
+            this.backButton.Click += new System.EventHandler(this._backButton_Click);
             // 
             // cancelButton
             // 
@@ -217,7 +261,7 @@
             this.cancelButton.TabIndex = 3;
             this.cancelButton.Text = "Cancel";
             this.cancelButton.UseVisualStyleBackColor = true;
-            this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
+            this.cancelButton.Click += new System.EventHandler(this._cancelButton_Click);
             // 
             // streamButton
             // 
@@ -258,6 +302,20 @@
             this.printToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
             this.printToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.printToolStripMenuItem.Text = "&Print";
+            this.printToolStripMenuItem.Click += new System.EventHandler(this._printToolStripMenuItem_Click);
+            // 
+            // streamToolStripMenuItem
+            // 
+            this.streamToolStripMenuItem.Name = "streamToolStripMenuItem";
+            this.streamToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.streamToolStripMenuItem.Text = "Strea&m";
+            // 
+            // cancelToolStripMenuItem
+            // 
+            this.cancelToolStripMenuItem.Name = "cancelToolStripMenuItem";
+            this.cancelToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cancelToolStripMenuItem.Text = "Canc&el";
+            this.cancelToolStripMenuItem.Click += new System.EventHandler(this._cancelToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -272,19 +330,7 @@
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.aboutToolStripMenuItem.Text = "&About...";
-            // 
-            // streamToolStripMenuItem
-            // 
-            this.streamToolStripMenuItem.Name = "streamToolStripMenuItem";
-            this.streamToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.streamToolStripMenuItem.Text = "Strea&m";
-            // 
-            // cancelToolStripMenuItem
-            // 
-            this.cancelToolStripMenuItem.Name = "cancelToolStripMenuItem";
-            this.cancelToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.cancelToolStripMenuItem.Text = "Canc&el";
-            this.cancelToolStripMenuItem.Click += new System.EventHandler(this.cancelToolStripMenuItem_Click);
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this._aboutToolStripMenuItem_Click);
             // 
             // OrderForm
             // 
@@ -306,7 +352,7 @@
             this.Text = "Your Order";
             this.movieSelectedGroupBox.ResumeLayout(false);
             this.movieSelectedGroupBox.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.moviePictureBox)).EndInit();
             this.yourOrderGroupBox.ResumeLayout(false);
             this.yourOrderGroupBox.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
@@ -332,7 +378,7 @@
         private System.Windows.Forms.Label subTotalLabel;
         private System.Windows.Forms.Label salesTaxLabel;
         private System.Windows.Forms.Label grandTotalLabel;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox moviePictureBox;
         private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.Button cancelButton;
         private System.Windows.Forms.Button streamButton;
@@ -343,5 +389,8 @@
         private System.Windows.Forms.ToolStripMenuItem cancelToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private System.Windows.Forms.TextBox additionalTextBox;
+        private System.Windows.Forms.Label additionalLabel;
+        private System.Windows.Forms.CheckBox orderCheckBox;
     }
 }

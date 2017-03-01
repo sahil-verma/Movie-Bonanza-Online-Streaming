@@ -12,6 +12,12 @@ namespace Assignment3_Movie_Bonanza
 {
     public partial class selectionForm : Form
     {
+        public string[] stroingValues = { "", "", "" };
+        //movieTitle, Category, Cost
+        public System.Drawing.Image pictureMovie;
+
+        //3. create a reference to the previous form
+        public OrderForm firstForm;
         public selectionForm()
         {
             InitializeComponent();
@@ -163,9 +169,14 @@ namespace Assignment3_Movie_Bonanza
             }
 
             nextButton.Enabled = true;
+
+            stroingValues[0] = titleTextBox.Text;
+            stroingValues[1] = categoryTextBox.Text;
+            stroingValues[2] = costTextBox.Text;
+            pictureMovie = moviePictureBox.Image;
         }
 
-        private void nextButton_Click(object sender, EventArgs e)
+        private void _nextButton_Click(object sender, EventArgs e)
         {
             //1. intantiate 
             OrderForm orderForm = new OrderForm();
@@ -175,6 +186,7 @@ namespace Assignment3_Movie_Bonanza
 
             orderForm.Show();
             this.Hide();
+            orderForm._storedVales();
         }
     }
 }
