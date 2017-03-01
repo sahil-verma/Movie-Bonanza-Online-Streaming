@@ -1,6 +1,6 @@
 ﻿namespace Assignment3_Movie_Bonanza
 {
-    partial class yourOrderForm
+    partial class OrderForm
     {
         /// <summary>
         /// Required designer variable.

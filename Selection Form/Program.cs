@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Selection_Form
+namespace Assignment3_Movie_Bonanza
 {
     static class Program
     {

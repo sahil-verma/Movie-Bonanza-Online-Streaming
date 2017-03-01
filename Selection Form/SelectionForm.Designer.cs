@@ -1,4 +1,4 @@
-﻿namespace Selection_Form
+﻿namespace Assignment3_Movie_Bonanza
 {
     partial class selectionForm
     {

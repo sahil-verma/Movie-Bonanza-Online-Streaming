@@ -10,31 +10,13 @@ using System.Windows.Forms;
 
 namespace Assignment3_Movie_Bonanza
 {
-    public partial class yourOrderForm : Form
+    public partial class OrderForm : Form
     {
-        public yourOrderForm()
+        public selectionForm previousForm;
+        public OrderForm()
         {
             InitializeComponent();
         }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox6_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

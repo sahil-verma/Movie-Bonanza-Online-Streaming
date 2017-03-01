@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Selection_Form
+namespace Assignment3_Movie_Bonanza
 {
     public partial class selectionForm : Form
     {
@@ -166,7 +166,14 @@ namespace Selection_Form
 
         private void nextButton_Click(object sender, EventArgs e)
         {
+            //1. intantiate 
+            OrderForm orderForm = new OrderForm();
 
+            //2. pass a reference to the 
+            orderForm.previousForm = this;
+
+            orderForm.Show();
+            this.Hide();
         }
     }
 }
