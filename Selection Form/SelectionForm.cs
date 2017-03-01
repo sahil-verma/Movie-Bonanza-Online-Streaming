@@ -178,6 +178,7 @@ namespace Assignment3_Movie_Bonanza
 
         private void _nextButton_Click(object sender, EventArgs e)
         {
+
             //1. intantiate 
             OrderForm orderForm = new OrderForm();
 

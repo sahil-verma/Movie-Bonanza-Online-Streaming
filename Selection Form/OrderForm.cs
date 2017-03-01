@@ -13,7 +13,8 @@ namespace Assignment3_Movie_Bonanza
 {
     public partial class OrderForm : Form
     {
-        
+        public string storingGrandTotal;
+
         //3. create a reference to the previous form
         public selectionForm previousForm;
         public OrderForm()
@@ -93,7 +94,22 @@ namespace Assignment3_Movie_Bonanza
             salesTaxTextBox.Text = Double.Parse(salesTaxTextBox.Text).ToString("C", CultureInfo.CurrentCulture);
             grandTotalTextBox.Text = (double.Parse(subTotalTextBox.Text.Remove(0, 1)) + (double.Parse(salesTaxTextBox.Text.Remove(0, 1)))).ToString();
             grandTotalTextBox.Text = Double.Parse(grandTotalTextBox.Text).ToString("C", CultureInfo.CurrentCulture);
+            storingGrandTotal = grandTotalTextBox.Text;
+        }
 
+        private void streamButton_Click(object sender, EventArgs e)
+        {
+            
+            //1. intantiate 
+            streamForm streamForm = new streamForm();
+
+            //2. pass a reference to the 
+            streamForm.secondForm = this;
+
+            streamForm.firstForm = this.previousForm;
+            streamForm.Show();
+            this.Hide();
+            streamForm._notifyLabels();
         }
     }
 }

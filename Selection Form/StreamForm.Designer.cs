@@ -43,6 +43,7 @@
             this.okButton.TabIndex = 0;
             this.okButton.Text = "Ok";
             this.okButton.UseVisualStyleBackColor = true;
+            this.okButton.Click += new System.EventHandler(this._okButton_Click);
             // 
             // thanksLabel
             // 
@@ -58,7 +59,7 @@
             this.notifyCreditLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.notifyCreditLabel.Location = new System.Drawing.Point(36, 86);
             this.notifyCreditLabel.Name = "notifyCreditLabel";
-            this.notifyCreditLabel.Size = new System.Drawing.Size(226, 23);
+            this.notifyCreditLabel.Size = new System.Drawing.Size(264, 23);
             this.notifyCreditLabel.TabIndex = 2;
             // 
             // notifyMovieLabel
@@ -66,7 +67,7 @@
             this.notifyMovieLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.notifyMovieLabel.Location = new System.Drawing.Point(36, 126);
             this.notifyMovieLabel.Name = "notifyMovieLabel";
-            this.notifyMovieLabel.Size = new System.Drawing.Size(226, 23);
+            this.notifyMovieLabel.Size = new System.Drawing.Size(264, 23);
             this.notifyMovieLabel.TabIndex = 3;
             // 
             // streamForm
