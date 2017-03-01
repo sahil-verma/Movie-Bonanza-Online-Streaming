@@ -38,8 +38,8 @@
             this.costLabel = new System.Windows.Forms.Label();
             this.categoryLabel = new System.Windows.Forms.Label();
             this.titleLabel = new System.Windows.Forms.Label();
-            this.nextButton = new System.Windows.Forms.Button();
             this.moviePictureBox = new System.Windows.Forms.PictureBox();
+            this.nextButton = new System.Windows.Forms.Button();
             this.yourSelectionGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.moviePictureBox)).BeginInit();
             this.SuspendLayout();
@@ -163,8 +163,17 @@
             this.titleLabel.TabIndex = 1;
             this.titleLabel.Text = "Title";
             // 
+            // moviePictureBox
+            // 
+            this.moviePictureBox.Location = new System.Drawing.Point(16, 25);
+            this.moviePictureBox.Name = "moviePictureBox";
+            this.moviePictureBox.Size = new System.Drawing.Size(115, 128);
+            this.moviePictureBox.TabIndex = 0;
+            this.moviePictureBox.TabStop = false;
+            // 
             // nextButton
             // 
+            this.nextButton.Enabled = false;
             this.nextButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nextButton.Location = new System.Drawing.Point(522, 297);
             this.nextButton.Name = "nextButton";
@@ -173,14 +182,6 @@
             this.nextButton.Text = "Next";
             this.nextButton.UseVisualStyleBackColor = true;
             this.nextButton.Click += new System.EventHandler(this.nextButton_Click);
-            // 
-            // moviePictureBox
-            // 
-            this.moviePictureBox.Location = new System.Drawing.Point(16, 25);
-            this.moviePictureBox.Name = "moviePictureBox";
-            this.moviePictureBox.Size = new System.Drawing.Size(115, 128);
-            this.moviePictureBox.TabIndex = 0;
-            this.moviePictureBox.TabStop = false;
             // 
             // selectionForm
             // 

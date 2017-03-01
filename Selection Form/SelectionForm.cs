@@ -162,6 +162,7 @@ namespace Assignment3_Movie_Bonanza
                 costTextBox.Text = "$4.99";
             }
 
+            nextButton.Enabled = true;
         }
 
         private void nextButton_Click(object sender, EventArgs e)
