@@ -28,14 +28,9 @@ namespace Assignment3_Movie_Bonanza
             this.Close();
         }
 
-        private void _cancelToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         private void _printToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("This program calculates the health", "About",
+            MessageBox.Show(previousForm.stroingValues[0] + " of category " + previousForm.stroingValues[1] + " will cost you for " + previousForm.stroingValues[2], "About",
             MessageBoxButtons.OK,
             MessageBoxIcon.Information);
         }
@@ -61,15 +56,10 @@ namespace Assignment3_Movie_Bonanza
 
         private void _backButton_Click(object sender, EventArgs e)
         {
-            //1. intantiate 
-            selectionForm SelectionForm = new selectionForm();
 
-            //2. pass a reference to the 
-            SelectionForm.firstForm = this;
-
-            SelectionForm.Show();
-
+            previousForm.Show();
             this.Hide();
+
         }
 
         public void _storedVales()
@@ -97,7 +87,7 @@ namespace Assignment3_Movie_Bonanza
             storingGrandTotal = grandTotalTextBox.Text;
         }
 
-        private void streamButton_Click(object sender, EventArgs e)
+        private void _streamButton_Click(object sender, EventArgs e)
         {
             
             //1. intantiate 

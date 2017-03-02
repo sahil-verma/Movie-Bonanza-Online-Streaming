@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OrderForm));
             this.movieSelectedGroupBox = new System.Windows.Forms.GroupBox();
+            this.moviePictureBox = new System.Windows.Forms.PictureBox();
             this.categoryTextBox = new System.Windows.Forms.TextBox();
             this.titleTextBox = new System.Windows.Forms.TextBox();
             this.categoryLabel = new System.Windows.Forms.Label();
@@ -51,16 +52,15 @@
             this.streamButton = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.printToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.streamToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cancelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.moviePictureBox = new System.Windows.Forms.PictureBox();
-            this.printToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.movieSelectedGroupBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.moviePictureBox)).BeginInit();
             this.yourOrderGroupBox.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.moviePictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // movieSelectedGroupBox
@@ -77,6 +77,15 @@
             this.movieSelectedGroupBox.TabIndex = 0;
             this.movieSelectedGroupBox.TabStop = false;
             this.movieSelectedGroupBox.Text = "MovieSelected";
+            // 
+            // moviePictureBox
+            // 
+            this.moviePictureBox.Location = new System.Drawing.Point(20, 145);
+            this.moviePictureBox.Name = "moviePictureBox";
+            this.moviePictureBox.Size = new System.Drawing.Size(204, 190);
+            this.moviePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.moviePictureBox.TabIndex = 4;
+            this.moviePictureBox.TabStop = false;
             // 
             // categoryTextBox
             // 
@@ -263,7 +272,7 @@
             this.streamButton.TabIndex = 4;
             this.streamButton.Text = "Stream";
             this.streamButton.UseVisualStyleBackColor = true;
-            this.streamButton.Click += new System.EventHandler(this.streamButton_Click);
+            this.streamButton.Click += new System.EventHandler(this._streamButton_Click);
             // 
             // menuStrip1
             // 
@@ -286,18 +295,29 @@
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "&File";
             // 
+            // printToolStripMenuItem
+            // 
+            this.printToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("printToolStripMenuItem.Image")));
+            this.printToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.printToolStripMenuItem.Name = "printToolStripMenuItem";
+            this.printToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.printToolStripMenuItem.Text = "&Print";
+            this.printToolStripMenuItem.Click += new System.EventHandler(this._printToolStripMenuItem_Click);
+            // 
             // streamToolStripMenuItem
             // 
             this.streamToolStripMenuItem.Name = "streamToolStripMenuItem";
-            this.streamToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.streamToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.streamToolStripMenuItem.Text = "Strea&m";
+            this.streamToolStripMenuItem.Click += new System.EventHandler(this._streamButton_Click);
             // 
             // cancelToolStripMenuItem
             // 
             this.cancelToolStripMenuItem.Name = "cancelToolStripMenuItem";
-            this.cancelToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
+            this.cancelToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.cancelToolStripMenuItem.Text = "Canc&el";
-            this.cancelToolStripMenuItem.Click += new System.EventHandler(this._cancelToolStripMenuItem_Click);
+            this.cancelToolStripMenuItem.Click += new System.EventHandler(this._cancelButton_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -313,25 +333,6 @@
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.aboutToolStripMenuItem.Text = "&About...";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this._aboutToolStripMenuItem_Click);
-            // 
-            // moviePictureBox
-            // 
-            this.moviePictureBox.Location = new System.Drawing.Point(20, 145);
-            this.moviePictureBox.Name = "moviePictureBox";
-            this.moviePictureBox.Size = new System.Drawing.Size(204, 190);
-            this.moviePictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.moviePictureBox.TabIndex = 4;
-            this.moviePictureBox.TabStop = false;
-            // 
-            // printToolStripMenuItem
-            // 
-            this.printToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("printToolStripMenuItem.Image")));
-            this.printToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.printToolStripMenuItem.Name = "printToolStripMenuItem";
-            this.printToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
-            this.printToolStripMenuItem.Text = "&Print";
-            this.printToolStripMenuItem.Click += new System.EventHandler(this._printToolStripMenuItem_Click);
             // 
             // OrderForm
             // 
@@ -353,11 +354,11 @@
             this.Text = "Your Order";
             this.movieSelectedGroupBox.ResumeLayout(false);
             this.movieSelectedGroupBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.moviePictureBox)).EndInit();
             this.yourOrderGroupBox.ResumeLayout(false);
             this.yourOrderGroupBox.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.moviePictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

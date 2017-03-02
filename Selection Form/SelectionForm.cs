@@ -98,7 +98,7 @@ namespace Assignment3_Movie_Bonanza
                 moviePictureBox.Image = Assignment3_Movie_Bonanza.Properties.Resources.The_Eagle;
             }
 
-            if (currentMovieListBox.SelectedItem.ToString() == "Company	Men")
+            if (currentMovieListBox.SelectedItem.ToString() == "Company Men")
             {
                 categoryTextBox.Text = "Drama";
                 moviePictureBox.Image = Assignment3_Movie_Bonanza.Properties.Resources.Company_Men;
@@ -169,13 +169,17 @@ namespace Assignment3_Movie_Bonanza
             }
 
             nextButton.Enabled = true;
+            storingValues();
+            
+        }
 
+        public void storingValues()
+        {
             stroingValues[0] = titleTextBox.Text;
             stroingValues[1] = categoryTextBox.Text;
             stroingValues[2] = costTextBox.Text;
             pictureMovie = moviePictureBox.Image;
         }
-
         private void _nextButton_Click(object sender, EventArgs e)
         {
 

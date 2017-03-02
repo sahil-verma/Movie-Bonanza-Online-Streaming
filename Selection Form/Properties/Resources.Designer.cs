@@ -173,6 +173,16 @@ namespace Assignment3_Movie_Bonanza.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap splashForm {
+            get {
+                object obj = ResourceManager.GetObject("splashForm", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap The_Dilemma {
             get {
                 object obj = ResourceManager.GetObject("The_Dilemma", resourceCulture);

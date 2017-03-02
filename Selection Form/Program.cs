@@ -16,7 +16,8 @@ namespace Assignment3_Movie_Bonanza
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new selectionForm());
+            //will run the splash form
+            Application.Run(new SplashForm());
         }
     }
 }

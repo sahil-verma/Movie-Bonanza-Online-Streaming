@@ -38,8 +38,8 @@
             this.costLabel = new System.Windows.Forms.Label();
             this.categoryLabel = new System.Windows.Forms.Label();
             this.titleLabel = new System.Windows.Forms.Label();
-            this.nextButton = new System.Windows.Forms.Button();
             this.moviePictureBox = new System.Windows.Forms.PictureBox();
+            this.nextButton = new System.Windows.Forms.Button();
             this.yourSelectionGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.moviePictureBox)).BeginInit();
             this.SuspendLayout();
@@ -69,7 +69,7 @@
             this.currentMovieListBox.ItemHeight = 16;
             this.currentMovieListBox.Items.AddRange(new object[] {
             "Cedar Rapids",
-            "Company\tMen",
+            "Company Men",
             "Death Race 2",
             "Footloose",
             "Gnomeo and Juliet",
@@ -163,6 +163,14 @@
             this.titleLabel.TabIndex = 1;
             this.titleLabel.Text = "Title";
             // 
+            // moviePictureBox
+            // 
+            this.moviePictureBox.Location = new System.Drawing.Point(16, 25);
+            this.moviePictureBox.Name = "moviePictureBox";
+            this.moviePictureBox.Size = new System.Drawing.Size(115, 128);
+            this.moviePictureBox.TabIndex = 0;
+            this.moviePictureBox.TabStop = false;
+            // 
             // nextButton
             // 
             this.nextButton.Enabled = false;
@@ -174,14 +182,6 @@
             this.nextButton.Text = "Next";
             this.nextButton.UseVisualStyleBackColor = true;
             this.nextButton.Click += new System.EventHandler(this._nextButton_Click);
-            // 
-            // moviePictureBox
-            // 
-            this.moviePictureBox.Location = new System.Drawing.Point(16, 25);
-            this.moviePictureBox.Name = "moviePictureBox";
-            this.moviePictureBox.Size = new System.Drawing.Size(115, 128);
-            this.moviePictureBox.TabIndex = 0;
-            this.moviePictureBox.TabStop = false;
             // 
             // selectionForm
             // 
