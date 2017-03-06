@@ -188,6 +188,7 @@ namespace Assignment3_Movie_Bonanza
                 costTextBox.Text = "$4.99";
             }
 
+            //if there is any selection in the drop down list only then the next button will be used
             nextButton.Enabled = true;
             storingValues();
             
