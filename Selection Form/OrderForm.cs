@@ -13,21 +13,34 @@ namespace Assignment3_Movie_Bonanza
 {
     public partial class OrderForm : Form
     {
+        //it will store the total amount spend on the movie
         public string storingGrandTotal;
 
         //3. create a reference to the previous form
         public selectionForm previousForm;
+
+        //constructor
         public OrderForm()
         {
             InitializeComponent();
 
         }
 
+        /// <summary>
+        /// this event handler will close the form 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void _cancelButton_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
+        /// <summary>
+        /// this event handler will print a message for the selection of movie
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void _printToolStripMenuItem_Click(object sender, EventArgs e)
         {
             MessageBox.Show(previousForm.stroingValues[0] + " of category " + previousForm.stroingValues[1] + " will cost you for " + previousForm.stroingValues[2], "About",
@@ -35,12 +48,22 @@ namespace Assignment3_Movie_Bonanza
             MessageBoxIcon.Information);
         }
 
+        /// <summary>
+        /// this event handler tells about the application
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void _aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             orderAboutBox aboutApp = new orderAboutBox();
             aboutApp.ShowDialog();
         }
 
+        /// <summary>
+        /// this event handler will check whether the checkbox is checked 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void _orderCheckBox_CheckedChanged(object sender, EventArgs e)
         {
             additionalLabel.Visible = true;
@@ -54,6 +77,11 @@ namespace Assignment3_Movie_Bonanza
             _storedVales();
         }
 
+        /// <summary>
+        /// this event handler will take you to the selection form with the same selection and values.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void _backButton_Click(object sender, EventArgs e)
         {
 
@@ -62,6 +90,8 @@ namespace Assignment3_Movie_Bonanza
 
         }
 
+        //this method will show the values for title, category, cost and picture as per the 
+        //selection done in selection form and also it will calculate the total amount
         public void _storedVales()
         {
             titleTextBox.Text = previousForm.stroingValues[0];
@@ -87,6 +117,11 @@ namespace Assignment3_Movie_Bonanza
             storingGrandTotal = grandTotalTextBox.Text;
         }
 
+        /// <summary>
+        /// this event handler will take you to the next form which is stream form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void _streamButton_Click(object sender, EventArgs e)
         {
             

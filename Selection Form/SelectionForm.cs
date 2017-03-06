@@ -1,4 +1,12 @@
-﻿using System;
+﻿///<summary>
+///	Name of Programme - Movie Bonanza - Online Streaming
+///	Name - Sahil Verma
+///	Student Number - 200335300
+///	Date Last Modified or app creation date - March 5, 2017
+///	Short revision history - functionality added, structured, gui, splash form
+///	Description - the app calculates the cost for the movie as per the selection
+/// </summary>
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,17 +20,29 @@ namespace Assignment3_Movie_Bonanza
 {
     public partial class selectionForm : Form
     {
+        //it will store the values in an array to be used further in another form
         public string[] stroingValues = { "", "", "" };
         //movieTitle, Category, Cost
+
+        //it will store the picture used for the movie so that it can be used
+        //in another form
         public System.Drawing.Image pictureMovie;
 
         //3. create a reference to the previous form
         public OrderForm firstForm;
+
+        //constructor for this form
         public selectionForm()
         {
             InitializeComponent();
         }
-            
+        
+        /// <summary>
+        /// this event handler will show the data in text box for title, category,
+        /// and cost of the movie as per the selection from drop downLsit
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void _selection(object sender, EventArgs e)
         {
             titleTextBox.Text = (currentMovieListBox.SelectedItem).ToString();
@@ -173,6 +193,8 @@ namespace Assignment3_Movie_Bonanza
             
         }
 
+        //this method will store the values of title, category, cost, 
+        //and movie picture as per the selection from dropDownList
         public void storingValues()
         {
             stroingValues[0] = titleTextBox.Text;
@@ -180,6 +202,14 @@ namespace Assignment3_Movie_Bonanza
             stroingValues[2] = costTextBox.Text;
             pictureMovie = moviePictureBox.Image;
         }
+
+        /// <summary>
+        /// this event handler will close this form and open the order form
+        /// and will send the values stored in storing values method to the textboxes 
+        /// of the order form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void _nextButton_Click(object sender, EventArgs e)
         {
 
